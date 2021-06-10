@@ -1,9 +1,3 @@
-[submodule "docs"]
-	path = docs
-	url = https://github.com/ABWorldOfficial/WebsiteDocs
 [submodule "img/icons"]
 	path = img/icons
-	url = https://github.com/ABWorldOfficial/ABWorldIcons
-[submodule "abmedia"]
-	path = abmedia
-	url = https://github.com/ABWorldOfficial/ABMediaPages
+	url = https://github.com/ABCo-Src/Icons
