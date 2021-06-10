@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>ABWorld</title>
+        <title>ABCo</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="css/index.css">
@@ -14,10 +14,10 @@
             <div class="openingContents">
                 <div class="openingMain">
                     <div class="openingMainImgContainer">
-                        <img src="img/icons/ABWorld/LARGE.png">
+                        <img src="img/icons/Logo/ABWorld/LARGE.png">
                     </div>
-                    <h1>ABWorld</h1>
-                    <p>ABWorld provides and creates free and open-source software, tools and much more.</p>
+                    <h1>ABCo</h1>
+                    <p>ABCo provides and creates free and open-source software, tools and much more.</p>
                     <a class="openingMainProjects btn btnFilled" data-scrollOnClick="true" data-scrollTo=".projects">Projects <img src="img/graphics/smallDownArrow.svg"></a>
                     <a class="openingMainProjects btn" data-scrollOnClick="true" data-scrollTo=".moreInfo">More Info <img src="img/graphics/smallDownArrow.svg"></a>
                 </div>
@@ -27,7 +27,7 @@
         </div>
 
         <div class="section projects" data-default-slider="#softwareSliders">
-            <h1 class="sectionHeading" style="text-align: center;">Our products</h1>
+            <h1 class="sectionHeading" style="text-align: center;">All products</h1>
 
             <div class="sliderTabs">
                 <a class="sliderTab sliderTabSelected" data-opens="#softwareSliders">Software</a>
@@ -41,7 +41,7 @@
                 <div class="slider">
                     <div class="sliderFront sliderFrontClosed">
                         <img class="arrow" src="img/graphics/smallRightArrow.svg">
-                        <img class="icon" src="img/icons/ABSoftware/ABPaint/Logo/LARGE.png">
+                        <img class="icon" src="img/icons/Software/ABPaint/Logo/LARGE.png">
                         <div class="right">
                             <h2>ABPaint</h2>
                             <div class="tags">
@@ -68,10 +68,10 @@
                 <div class="slider">
                     <div class="sliderFront sliderFrontClosed">
                         <img class="arrow" src="img/graphics/smallRightArrow.svg">
-                        <img src="img/icons/Online/ABMedia/LARGE.png">
+                        <img src="img/icons/Online/ABMedia/Old/LARGE.png">
                         <div class="right">
                             <h2>ABMedia</h2>
-                            <p>The official YouTube channel for ABWorld.</p>
+                            <p>The official YouTube channel for ABCo.</p>
                         </div>
                     </div>
                     
@@ -131,9 +131,9 @@
                 <div class="slider">
                     <div class="sliderFront sliderFrontClosed">
                         <img class="arrow" src="img/graphics/smallRightArrow.svg">
-                        <img class="icon" src="img/icons/ABSoftware/ABSave/Logo/LARGE.png">
+                        <img class="icon" src="img/icons/Software/ABSave/Logo/LARGE.png">
                         <div class="right">
-                            <h2>ABSoftware.ABSave</h2>
+                            <h2>ABSave</h2>
                             <div class="tags">
                                 <div class="tag tag-csharp">C#</div>
                                 <div class="tag tag-comingSoon">Alpha</div>
@@ -159,7 +159,7 @@
                 <div class="slider">
                     <div class="sliderFront sliderFrontClosed">
                         <img class="arrow" src="img/graphics/smallRightArrow.svg">
-                        <img class="icon" src="img/icons/ABSoftware/ABParser/LARGE.png">
+                        <img class="icon" src="img/icons/Software/ABParser/LARGE.png">
                         <div class="right">
                             <h2>ABParser</h2>
                             <div class="tags">
@@ -185,7 +185,7 @@
                 <div class="slider">
                     <div class="sliderFront sliderFrontClosed">
                         <img class="arrow" src="img/graphics/smallRightArrow.svg">
-                        <img class="icon" src="img/icons/ABSoftware/ABSoftware.Core/LARGE.png">
+                        <img class="icon" src="img/icons/Software/ABSoftware.Core/LARGE.png">
                         <div class="right">
                             <h2>ABSoftware.Core</h2>
                             <div class="tags">
@@ -233,27 +233,27 @@
                     <div class="moreInfoSecond">
                         <img src="img/icons/Online/ABSoftware Docs/LARGE.png">
                         <h3>ABSoftware Docs</h3>
-                        <p><b>Complete</b> text documentation for ABWorld projects.</p>
+                        <p><b>Complete</b> text documentation for ABCo projects.</p>
                         <a class="btn btnFilled allDocsGuides" data-scrollOnClick="true" data-scrollTo=".documentation">See all ABSoftware docs <img src="img/graphics/smallDownArrow.svg"></a>
                     </div>
                 </div>
 
                 <div class="moreInfoPart partDevelopment partLearningAndDevelopment">
-                    <h2>Develop for ABWorld</h2>
-                    <p>If you're a programmer - you can help us out by contributing the one of the ABWorld projects. Most projects are <b>C#, C++</b>, with this website being <b>HTML, CSS, JS (jQuery)!</b> Source code is available at either one our GitHub pages.</p>
+                    <h2>Coming soon!</h2>
+                    <!--<p>If you're a programmer - you can help us out by contributing the one of the ABCo projects. Most projects are <b>C#, C++</b>, with this website being <b>HTML, CSS, JS (jQuery)!</b> Source code is available at either one our GitHub pages.</p>
 
                     <div class="moreInfoFirst">
-                        <img src="img/icons/ABWorld/LARGE.png">
-                        <h3>ABWorldOfficial</h3>
+                        <img src="img/icons/ABCo/LARGE.png">
+                        <h3>ABCoOfficial</h3>
                         <p>Contains non-ABSoftware products (e.g. the website).</p>
-                        <a class="btn btnFilled" href="https://github.com/ABWorldOfficial">Visit GitHub</a>
+                        <a class="btn btnFilled" href="https://github.com/ABCoOfficial">Visit GitHub</a>
                     </div>
                     <div class="moreInfoSecond">
                         <img src="img/icons/ABSoftware/ABSoftware/LARGE.png">
                         <h3>ABSoftwareOfficial</h3>
                         <p>Contains all ABSoftware products (e.g. ABParser, ABSave etc.) This is also where you'll find documentation about how you can develop applications.</p>
                         <a class="btn btnFilled" href="https://github.com/ABSoftwareOfficial">Visit GitHub</a>
-                    </div>
+                    </div>-->
                 </div>
 
                 
@@ -274,7 +274,7 @@
                 <div class="slider">
                     <div class="sliderFront sliderFrontClosed">
                         <img class="arrow" src="img/graphics/smallRightArrowLight.svg">
-                        <img class="icon" src="img/icons/ABSoftware/ABPaint/Logo/LARGE.png">
+                        <img class="icon" src="img/icons/Software/ABPaint/Logo/LARGE.png">
                         <div class="right">
                             <h2>ABPaint</h2>
                             <div class="tags">
@@ -296,13 +296,13 @@
                 <div class="slider">
                     <div class="sliderFront sliderFrontClosed">
                         <img class="arrow" src="img/graphics/smallRightArrowLight.svg">
-                        <img class="icon" src="img/icons/ABSoftware/ABSoftware.Core/LARGE.png">
+                        <img class="icon" src="img/icons/Software/ABSoftware.Core/LARGE.png">
                         <div class="right">
                             <h2>ABSoftware.Core</h2>
                             <div class="tags">
                                 <div class="tag tag-comingSoon">Coming soon</div>
                             </div>
-                            <p>If you want to develop for ABWorld, take this interactive guide to learn the base of all ABSoftware programs first!</p>
+                            <p>If you want to develop for ABCo, take this interactive guide to learn the base of all ABSoftware programs first!</p>
                         </div>
                     </div>
                     
@@ -318,7 +318,7 @@
                 <div class="slider">
                     <div class="sliderFront sliderFrontClosed">
                         <img class="arrow" src="img/graphics/smallRightArrowLight.svg">
-                        <img src="img/icons/ABSoftware/ABPaint/Logo/LARGE.png">
+                        <img src="img/icons/Software/ABPaint/Logo/LARGE.png">
                         <div class="right">
                             <h2>ABPaint</h2>
                             <div class="tags">
@@ -337,7 +337,7 @@
                 <div class="slider">
                     <div class="sliderFront sliderFrontClosed">
                         <img class="arrow" src="img/graphics/smallRightArrowLight.svg">
-                        <img class="icon" src="img/icons/ABSoftware/ABParser/LARGE.png">
+                        <img class="icon" src="img/icons/Software/ABParser/LARGE.png">
                         <div class="right">
                             <h2>ABParser</h2>
                             <div class="tags">
@@ -357,7 +357,7 @@
         </div>
 
         <div class="section copyright">
-            <p>Copyright (C) <?php echo date("Y") ?> Alex Burrows, ABWorld Team</p>
+            <p>Copyright (C) <?php echo date("Y") ?> Alex Burrows, ABCo Team</p>
         </div>
     </body>
 </html>
