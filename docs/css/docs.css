@@ -1,0 +1,275 @@
+body {
+    margin: 0;
+    font-family: 'Roboto';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "top"
+        "topBoxes"
+        "main";
+}
+
+/* Colour Schemes */
+.lightTheme {
+    background-color: rgb(200, 200, 200);
+    --topbar-bg: rgb(170, 170, 170);
+    --topbar-btn-stroke: black;
+    --topbar-btn-selected: rgba(140, 140, 210, 0.7);
+    --topbar-btn-hover: rgba(140, 140, 140, 0.7);
+    --menu-bg: rgb(180, 180, 180);
+    --menu-item-hover: rgba(120, 120, 120, 0.7);
+    --menu-item-selected: rgba(120, 120, 180, 0.7);
+}
+
+.darkTheme {
+    color: white;
+    background-color: rgb(40, 40, 40);
+    --topbar-bg: rgb(90, 90, 90);
+    --topbar-btn-stroke: white;
+    --topbar-btn-selected: rgba(120, 120, 255, 0.7);
+    --topbar-btn-hover: rgba(150, 150, 150, 0.7);
+    --menu-bg: rgb(60, 60, 60);
+    --menu-item-hover: rgba(90, 90, 90, 0.7);
+    --menu-item-selected: rgba(90, 90, 130, 0.7);
+}
+
+.lightTheme .menuZigZag {
+    background-image: url('../img/ZigZagLight.svg');
+}
+
+.darkTheme .menuZigZag {
+    background-image: url('../img/ZigZagDark.svg');
+}
+
+/* Top Bar */
+.topBar {
+    padding: 10px;
+    background-color: var(--topbar-bg);
+
+    grid-area: top;
+
+    display: grid;
+    grid-template-rows: 1fr 15px 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "left"
+        "_"
+        "right";
+}
+
+@media (min-width: 370px) {
+    .topBar {
+        height: 30px;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: "left _ right";
+    }
+}
+
+.topBar .slider {
+    margin-right: 10px;
+}
+
+.topBarLeft, .topBarRight {
+    height: 30px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.topBarLeft {
+    grid-area: left;
+}
+
+.topBarRight {
+    grid-area: right;
+}
+
+.topBarBtn {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid;
+    border-radius: 100%;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.topBarBtnSelected {
+    background-color: var(--topbar-btn-selected);
+}
+
+.topBarBtn:hover {
+    background-color: var(--topbar-btn-hover);
+}
+
+.topBarBtn svg path {
+    stroke: var(--topbar-btn-stroke);
+}
+
+.topBoxes {
+    grid-area: topBoxes;
+}
+
+.topBox {
+    padding: 10px;
+}
+
+.topBoxContents {
+    color: white;
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.topBox p {
+    margin: 10px;
+}
+
+.topBox .btn {
+    margin: 5px;
+}
+
+.jsBox {
+    background-color: rgb(140, 60, 60);
+}
+
+.cookiesBox {
+    background-color: rgb(60, 60, 140);
+
+    display: none;
+}
+
+/* MENU */
+.menu {
+    grid-area: main;
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    z-index: 1;
+    
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "menuList"
+        "zigZag";
+}
+
+#absDocsNavTitle {
+    cursor: pointer;
+}
+
+#rootMenuList {
+    height: 100%;
+    grid-area: menuList;
+}
+
+.menuList {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--menu-bg);
+
+    padding-left: 20px;
+}
+
+.menuItem {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menuItem img {
+    margin-right: 7px;
+}
+
+.menuItem #arrow {
+    padding: 5px;
+}
+
+.menuItem:hover {
+    background-color: var(--menu-item-hover);
+}
+
+.menuItemSelected {
+    background-color: var(--menu-item-selected);
+}
+
+.menuItem .selectedArrow {
+    transform: rotate(90deg);
+}
+
+.menuItemInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menuList-inner {
+    display: none;
+}
+
+.menuZigZag {
+    grid-area: zigZag;
+
+    display: none;
+}
+
+/* Main */
+.main {
+    grid-area: main;
+    width: 100%;
+    height: 100%;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    overflow-x: hidden;
+}
+
+/* Desktop View */
+@media (min-width: 980px) {
+    body {
+        grid-template-rows: auto auto 1fr;
+        grid-template-columns: auto 1fr;
+        grid-template-areas:
+            "top top"
+            "topBoxes topBoxes"
+            "menu main";
+    }
+
+    .menu { 
+        grid-area: menu;
+
+        width: 400px;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto;
+        grid-template-areas: "menuList zigZag";
+    }
+
+    .menuZigZag {
+        display: block;
+
+        height: 100%;
+        width: 30px;
+
+        background-repeat: repeat-y;
+        transform: rotate(0);
+    }
+}

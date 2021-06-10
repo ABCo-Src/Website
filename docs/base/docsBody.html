@@ -1,0 +1,57 @@
+<!-- Top Bar -->
+<div class="topBar">
+    <div class="topBarLeft">
+        <div class="topBarBtn topBarBtnSelected" data-is-open="true" data-to-open="#menu" id="menuBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="32">
+                <path stroke="#000" stroke-width="2.2" fill-opacity="0" d="M 0 8 L 20 8"></path>
+                <path stroke="#000" stroke-width="2.2" fill-opacity="0" d="M 0 15 L 20 15"></path>
+                <path stroke="#000" stroke-width="2.2" fill-opacity="0" d="M 0 22 L 20 22"></path>
+            </svg>
+        </div>
+        <h3 id="absDocsNavTitle">ABSoftware Docs</h3>
+    </div>
+    <div class="topBarRight">
+        <div class="slider slider-red" data-slider-id="theme">
+            <div class="slider-text">
+                <p class="slider-text-left">DARK</p>
+                <p class="slider-text-right">LIGHT</p>
+            </div>
+            <div class="slider-drag"></div>
+        </div>
+        <div class="topBarBtn" data-to-open="#cookiesMenu" id="cookiesBtn">
+            <svg class="cookiesDropdown" xmlns="http://www.w3.org/2000/svg" width="20" height="32">
+                <path stroke="#000" stroke-width="2" fill-opacity="0" d="M 3 9 L 10 19 L 17 9"></path>
+            </svg>
+        </div>
+    </div>
+</div>
+
+<!-- Top Boxes -->
+<div class="topBoxes">
+    <div class="topBox jsBox" id="noJSMenu">
+        <div class="topBoxContents">
+            <h4>No JavaScript</h4>
+            <p>This page needs JavaScript to work!</p>
+        </div>
+    </div>
+    <div class="topBox cookiesBox" id="cookiesMenu">
+        <div class="topBoxContents">
+            <h4>Enable Cookies</h4>
+            <p>To get a better experience, you can agree to use cookies, enabling them means the docs will automatically remember your theme and where you were.</p>
+
+            <a class="btn" id="cookiesDisable">Disable</a>
+            <a class="btn btnFilled" id="cookiesEnable">Enable</a>
+        </div>
+    </div>
+</div>
+
+<!-- Menu -->
+<div class="menu" id="menu">
+    <div class="menuList" id="rootMenuList"></div>
+    <div class="menuZigZag"></div>
+</div>
+
+<!-- Main -->
+<div class="main">
+    <iframe id="mainContent" src="pages/start.php"></iframe>
+</div>

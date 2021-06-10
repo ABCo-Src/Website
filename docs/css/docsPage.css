@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro:700');
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(7, auto) 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "strip1 strip2 strip3 strip4 strip5 strip6 attachments content";
+}
+
+@media (max-width: 740px) {
+    .stripsContainer {
+        display: none;
+    }
+}
+
+.attachmentsColumn {
+    grid-area: attachments;
+    width: 32px;
+}
+
+.attachment {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+}
+
+.container {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+
+    grid-area: content;
+    word-wrap: break-word;
+    padding-right: 5px;
+    padding-bottom: 15px;
+}
+
+.img-box {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+.stripsContainer {
+    position: relative;
+    margin-left: 3px;
+}
+
+.strip {
+    writing-mode: vertical-lr;
+    position: absolute;
+    transform: rotate(180deg);
+    top: 0;
+    width: 25px;
+    text-align: right;
+}
+
+.strip p {
+    margin: 0 3px;
+    position: absolute;
+}
+
+.docs-table {
+    width: 100%;
+    text-align: center;
+    border-spacing: 5px;
+}
+
+.docs-table, th, td {
+    border: 2px solid rgb(20, 20, 20);
+    border-collapse: collapse;
+}
+
+/* Theme */
+.lightContainer {
+    color: black;
+}
+
+.darkContainer {
+    color: white;
+}
+
+.darkContainer a {
+    color: rgb(100, 100, 255);
+}
+
+.lightContainer svg {
+    stroke: #777;
+}
+
+.lightContainer svg:hover {
+    stroke: #999;
+}
+
+.darkContainer svg {
+    stroke: #ccc;
+}
+
+.darkContainer svg:hover {
+    stroke: #999;
+}
+
+.lightContainer .docs-table th {
+    background-color: rgba(160, 160, 160, 0.75);
+}
+
+.lightContainer .docs-table tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+.lightContainer .docs-table tr:nth-child(odd) {
+    background-color: rgba(190, 190, 190, 0.75);
+}
+
+.darkContainer .docs-table th {
+    background-color: rgba(30, 30, 30, 0.75);
+}
+
+.darkContainer .docs-table tr:nth-child(even) {
+    background-color: rgb(60, 60, 60);
+}
+
+.darkContainer .docs-table tr:nth-child(odd) {
+    background-color: rgba(40, 40, 40, 0.75);
+}
+
+.docs-table th, .docs-table td { 
+    padding: 15px;
+}
+
+/* Strips Colours */
+
+.lightContainer .stripsColumn1 .strip {
+    background-color: rgb(176, 86, 176);
+}
+
+.darkContainer .stripsColumn1 .strip {
+    background-color: rgb(70, 0, 70);
+}
+
+.lightContainer .stripsColumn2 .strip {
+    background-color: rgb(86, 86, 176);
+}
+
+.darkContainer .stripsColumn2 .strip {
+    background-color: rgb(6, 6, 70);
+}
+
+.lightContainer .stripsColumn3 .strip {
+    background-color: rgb(86, 176, 86);
+}
+
+.darkContainer .stripsColumn3 .strip {
+    background-color: rgb(0, 70, 0);
+}
+
+.lightContainer .stripsColumn4 .strip {
+    background-color: rgb(221, 176, 86);
+}
+
+.darkContainer .stripsColumn4 .strip {
+    background-color: rgb(140, 80, 0);
+}
+
+.lightContainer .stripsColumn5 .strip {
+    background-color: rgb(221, 86, 221);
+}
+
+.darkContainer .stripsColumn5 .strip {
+    background-color: rgb(161, 46, 161);
+}
+
+.lightContainer .stripsColumn6 .strip {
+    background-color: rgb(221, 86, 86);
+}
+
+.darkContainer .stripsColumn6 .strip {
+    background-color: rgb(136, 0, 0);
+}
+
+.lightContainer pre {
+    background-color: rgb(245, 245, 245);
+}
+
+.darkContainer pre {
+    background-color: rgb(0, 0, 0);
+}
+
+.navBoxContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+/* If stuff starts to get too small - let it wrap */
+@media (max-width: 925px) {
+    .navBoxContainer {
+        flex-wrap: wrap;
+    }
+}
+
+.navBox {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.navBox h1 {
+    word-wrap: break-word;
+}
+
+.navBoxImgContainer {
+    align-items: center;
+}
+
+.navBoxImgDark {
+    filter: invert(100%);
+}
+
+.lightContainer .navBox {
+    background-color: lightgray;
+}
+
+.lightContainer .navBox:hover {
+    background-color: gray;
+}
+
+.darkContainer .navBox {
+    background-color: rgb(20, 20, 20);
+}
+
+.darkContainer .navBox:hover {
+    background-color: rgb(35, 35, 35);
+}
+
+.navBox-half {
+    position: relative;
+    width: 50%;
+}
+
+/* If the screen is too small for a quarter, make them act like halfs, which will then overflow onto new lines. */
+@media (min-width: 800px) {
+    .navBox-quarter {
+        width: 25%;
+    }
+}
+
+@media (max-width: 800px) {
+    .navBox-quarter {
+        width: 50%;
+    }
+}
+
+.msgBox {
+    position: relative;
+    padding: 15px;
+    min-height: 100px;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    margin: 10px;
+}
+
+.lightContainer .infoBox {
+    border-color: rgb(128, 128, 196, 0.45);
+    background-color: rgba(128, 128, 196, 0.4);
+}
+
+.darkContainer .infoBox {
+    border-color: rgb(65, 65, 186, 0.45);
+    background-color: rgba(45, 45, 166, 0.4);
+}
+
+.lightContainer .warningBox {
+    border-color: rgb(196, 128, 128, 0.25);
+    background-color: rgba(196, 128, 128, 0.2);
+}
+
+.darkContainer .warningBox {
+    border-color: rgb(196, 18, 18, 0.25);
+    background-color: rgba(196, 18, 18, 0.2);
+}

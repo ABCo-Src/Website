@@ -1,0 +1,68 @@
+/* Slider Made For ABWorld */
+.slider {
+    width: 80px;
+    height: 20px;
+
+    box-sizing: content-box !important;
+
+    padding: 2px 2px 3px 2px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 15px;
+    cursor: pointer;
+
+    transition: border 0.35s;
+}
+ 
+.slider-drag {
+    z-index: 2;
+    display: block;
+    margin-top: -2px;
+
+    width: 32px;
+    height: 20px;
+
+    border-radius: 16px;
+
+    background-color: rgb(130, 130, 130);
+    transition: margin-left ease-in-out 0.2s;
+}
+
+.slider-right {
+    margin-left: 48px;
+}
+
+.slider-red {
+    transition: background-color 0.35s;
+    border: 3px solid rgb(255, 0, 0);
+    background-color: rgb(255, 0, 0, 0.08);
+}
+
+.slider-red:hover {
+    background-color: rgb(255, 0, 0, 0.2);
+}
+
+.slider-blue {
+    transition: background-color 0.35s;
+    border: 3px solid rgb(0, 0, 255);
+    background-color: rgb(0, 0, 255, 0.08);
+}
+
+.slider-blue:hover {
+    background-color: rgb(0, 0, 255, 0.2);
+}
+
+.slider-text {
+    padding: 1px;
+
+}
+
+.slider-text-left {
+    float: left;
+    margin: 0;
+    display: none;
+}
+
+.slider-text-right {
+    float: right;
+    margin: 0;
+}

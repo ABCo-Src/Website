@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    width: 100%;
+
+    font-family: 'Roboto';
+}
+
+.section {
+    position: relative; /* Relative positioning lets z-index work, putting any sections on top of "main" */
+}
+
+.sectionHeading {
+    margin-top: 0;
+}
+
+/* ANIMATIONS */
+.fadeIn {
+    animation: 150ms ease-in-out 0s 1 forwards fade;
+}
+
+.fadeOut {
+    animation: 150ms ease-in-out 0s 1 reverse forwards fade;
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.pageBg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    background-image: url("../img/backgrounds/background.png");
+    background-size: cover;
+}
+
+/* OPENING */
+.opening {
+    z-index: -2;
+}
+
+/* Adjust to match image size */
+@media (max-height: 1080px) {
+    .opening, .openingMain {
+        height: 100%;
+    }
+}
+
+@media (min-height: 1080px) {
+    .opening, .openingMain {
+        height: 1080px;
+    }
+}
+
+.openingContents {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.3);
+
+    display: grid;
+    grid-template-rows: 1fr auto auto 45px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "main"
+        "box1"
+        "box2"
+        "down";
+}
+
+.openingMain {
+    grid-area: main;
+    position: fixed;
+    text-align: center;
+    vertical-align: middle;
+
+    color: white;
+
+    justify-content: center;
+    align-content: flex-start;
+    width: 100%;
+
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+        "logo title"
+        "description description"
+        "button1 button2"
+}
+
+.openingMain h1 {
+    align-self: center;       
+}
+
+@media (min-height: 520px) {
+    .openingMain {
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: auto auto;
+        grid-template-areas:
+            "logo logo"
+            "title title"
+            "description description"
+            "button1 button2";
+    }
+}
+
+@media (min-height: 700px) {
+    .openingMain {
+        align-content: center;
+    }
+}
+
+.openingMain .openingMainImgContainer { grid-area: logo; }
+.openingMain h1 { grid-area: title; }
+.openingMain p { grid-area: description; font-size: 125%; color: lightgray; }
+
+.openingMainImgContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.openingBox {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    font-size: 125%;
+    z-index: 0;
+}
+
+.openingBox h3 {
+    font-weight: bolder;
+    margin: 10px;
+}
+
+.warningBox {
+    grid-area: box1;
+    background-color: rgb(160, 40, 40);
+}
+
+.warningBox:hover {
+    background-color: rgb(160, 50, 50);
+}
+
+.infoBox {
+    grid-area: box2;
+    background-color: rgb(40, 40, 160);
+
+    /* We hide it, and it's shown through JavaScript, this means if the user does not have JavaScript, both messages won't cover up the fixed opening section. */
+    visibility: collapse;
+}
+
+.infoBox:hover {
+    background-color: rgb(50, 50, 160);
+}
+
+.openingDown {
+    position: relative;
+    grid-area: down;
+    z-index: 0;
+
+    text-align: center;
+    font-stretch: extra-expanded;
+    background-color: rgba(70, 70, 180, 0.6);
+    cursor: pointer;
+}
+
+/* Copyright */
+.copyright {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-size: 150%;
+}
