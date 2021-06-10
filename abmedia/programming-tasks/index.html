@@ -1,0 +1,1739 @@
+<html>
+
+<head>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap">
+
+    <!-- Prism -->
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+
+    <title>ABMedia Programming Series Tasks</title>
+</head>
+
+<body>
+
+    <!-- Title -->
+    <div class="title">
+        <h1>ABMedia Programming Series Tasks</h1>
+    </div>
+
+    <!-- Current Episode -->
+    <div class="currentEpisodeControls">
+        <div class="sequenceBtn currentEpisodeBtn currentEpisodeSelectedBtn" data-btn-index="0">
+            <h2>Sequence + Variables</h2>
+            <p>Episode 8</p>
+        </div>
+        <div class="selectionBtn currentEpisodeBtn" data-btn-index="1">
+            <h2>Selection</h2>
+            <p>Episode 9</p>
+        </div>
+        <div class="iterationBtn currentEpisodeBtn" data-btn-index="2">
+            <h2>Iteration</h2>
+            <p>Episode 10</p>
+        </div>
+        <div class="arraysBtn currentEpisodeBtn" data-btn-index="3">
+            <h2>Arrays</h2>
+            <p>Episode 13</p>
+        </div>
+        <div class="methodsBtn currentEpisodeBtn" data-btn-index="4">
+            <h2>Methods</h2>
+            <p>Episode 15</p>
+        </div>
+        <div class="classesBtn currentEpisodeBtn" data-btn-index="5">
+            <h2>COMING SOON</h2>
+            <p>Episode ?</p>
+        </div>
+        <div class="soonBtn1 currentEpisodeBtn" data-btn-index="6">
+            <h2>COMING SOON</h2>
+            <p>Coming Soon</p>
+        </div>
+        <div class="soonBtn2 currentEpisodeBtn" data-btn-index="7">
+            <h2>COMING SOON</h2>
+            <p>Coming Soon</p>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="carouselContainer">
+        <div class="carouselControls">
+            <div class="button leftButton"></div>
+            <div class="button rightButton"></div>
+            <p class="currentTask">This page requires JavaScript</p>
+        </div>
+
+        <div class="carousel">
+            <!--
+
+=======================================
+SEQUENCE
+=======================================
+
+-->
+            <div class="carouselGroup">
+                <div class="carouselItem">
+                    <div class="carouselQuestion">
+                        <h1>Simple Calculator</h1>
+                        <p>
+                            When the program starts, you ask the user to enter two numbers.
+                            <br />Then, you add them to together and print that into the screen.
+                            <br />
+
+                            <b>Type into the console below to test it out!</b>
+                        </p>
+
+                        <div class="carouselExtension">
+                            <h3>Extension</h3>
+                            <p>Once you've gotten that working, try getting it to print the sum it just did, such as:</p>
+                            <pre><code>13 + 57 = 70</code></pre>
+                        </div>
+
+                        <a class="carouselShowAnswer">Show Answer</a>
+
+                        <div class="carouselImage">
+                            <img src="images/calculator.png">
+                        </div>
+                    </div>
+                    <div class="carouselAnswer">
+                        <h1>Simple Calculator</h1>
+                        <p>
+                            First, we define our three variables.
+                            <br />Then, we set ask the user to input two numbers, and put them into two of the variables.
+                            <br />Finally, we print it out, in the way that was described in the extension.
+                        </p>
+
+                        <div class="carouselAnswerCode">
+                            <pre>
+                            <code class="language-csharp nonEp11Code">
+
+int firstNumber;
+int secondNumber;
+int answer;
+
+Console.WriteLine("Enter the first number.");
+firstNumber = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Enter the second number.");
+secondNumber = int.Parse(Console.ReadLine());
+
+answer = firstNumber + secondNumber;
+Console.WriteLine(firstNumber + " + " + secondNumber + " = " + answer);
+
+                            </code>
+                            <code class="language-csharp ep11Code">
+// Ask the user to enter the first number.
+Console.WriteLine("Enter the first number.");
+int firstNumber = int.Parse(Console.ReadLine());
+
+// Ask the user to enter the second number.
+Console.WriteLine("Enter the second number.");
+int secondNumber = int.Parse(Console.ReadLine());
+
+// Add up the two numbers.
+int answer = firstNumber + secondNumber;
+Console.WriteLine(firstNumber + " + " + secondNumber + " = " + answer);
+                            </code>
+                        </pre>
+                        </div>
+                        <a class="carouselEp11Text">Episode 11 Adjustments</a>
+                        <a class="carouselShowQuestion">Show Question</a>
+                    </div>
+                </div>
+                <div class="carouselItem">
+                    <div class="carouselQuestion">
+                        <h1>Name Writer</h1>
+                        <p>
+                            This one is extremely simple, ask the user to enter their first and last names.
+                            <br />Then, write it as both "FirstName, LastName" and "LastName, FirstName".
+                            <br />
+
+                            <b>Type into the console below to test it out!</b>
+                        </p>
+
+                        <div class="carouselExtension">
+                            <h3>Extension</h3>
+                            <p>Then, get it to also write their ages, like:</p>
+                            <pre><code>Alex, Burrows, who is 4 years old</code></pre>
+                            <pre><code>Burrows, Alex, who is 67 years old</code></pre>
+                        </div>
+
+                        <a class="carouselShowAnswer">Show Answer</a>
+
+                        <div class="carouselImage">
+                            <img src="images/names.png">
+                        </div>
+                    </div>
+                    <div class="carouselAnswer">
+                        <h1>Simple Calculator</h1>
+                        <p>
+                            First, we define three variables for the first and second names and age to go into.
+                            <br />Then, we actually set the values of those variables.
+                            <br />Finally, we print it out, in one line we print it with the first name first.
+                            <br />And in one, we print it with the last name first.
+                            <br />
+                            <br />
+
+                            <b>NOTE: In this program it isn't really neccessary to turn the age into an integer since we aren't actually doing any maths on it, literally all we're doing it joining it onto a string. But I did it anyway to demonstrate it.</b>
+                        </p>
+
+                        <div class="carouselAnswerCode">
+                            <pre>
+                            <code class="language-csharp nonEp11Code">
+
+string firstName;
+string secondName;
+int age;
+
+Console.WriteLine("Enter your first name.");
+firstName = Console.ReadLine();
+
+Console.WriteLine("Enter your second name.");
+secondName = Console.ReadLine();
+
+Console.WriteLine("Enter your age.");
+age = int.Parse(Console.ReadLine());
+
+Console.WriteLine(firstName + ", " + secondName + " and you are: " + age);
+Console.WriteLine(secondName + ", " + firstName + " and you are: " + age);
+Console.ReadLine();
+
+                            </code>
+                            <code class="language-csharp ep11Code">
+
+// Ask the user to enter their first name.
+Console.WriteLine("Enter your first name.");
+string firstName = Console.ReadLine();
+
+// Ask the user to enter their second name.
+Console.WriteLine("Enter your second name.");
+string secondName = Console.ReadLine();
+
+// Ask the user to enter their age.
+Console.WriteLine("Enter your age.");
+int age = int.Parse(Console.ReadLine());
+
+// Print it out the name in those two formats now.
+Console.WriteLine(firstName + ", " + secondName + " and you are: " + age);
+Console.WriteLine(secondName + ", " + firstName + " and you are: " + age);
+Console.ReadLine();
+                            </code>
+                            </pre>
+                        </div>
+                        <a class="carouselEp11Text">Episode 11 Adjustments</a>
+                        <a class="carouselShowQuestion">Show Question</a>
+                    </div>
+                </div>
+                <div class="carouselItem">
+                    <div class="carouselQuestion">
+                        <h1>Bits Calculator</h1>
+                        <p>
+                            This program will ask to enter a number in bytes, then it will work out how many kilobytes, megabytes and gigabytes that it is.
+                            <br />Be sure to look at the console below to see what I mean.
+                            <br />Once you've done that, make to go from gigabytes to megabytes, kilabytes and bytes.
+                            <br />To go from bytes to kilobytes, kilobytes to megabytes etc., divide by 1024 (or just 1000 to keep it simple).
+                            <br />
+                            <br />To go from megabytes to kilobytes, kilobytes to bytes etc., multiply by 1024.
+                            <br />
+                            <br />
+
+                            <i>Use floats for this one! To do that, instead of writing <code>int varName</code>, write <code>float varName</code> and instead of writing <code>int.Parse</code>, write <code>float.Parse</code></i>
+                            <br />
+                            <br />
+                            <b>NOTE: In C#, the operator to divide is "/" and the operator to multiply is "*"!</b>
+                        </p>
+
+                        <div class="carouselExtension">
+                            <h3>Extension</h3>
+                            <p>Once you've gotten that working, try getting them to enter bits, instead of bytes - remember, there are 8 bits in a byte.</p>
+                        </div>
+
+                        <a class="carouselShowAnswer">Show Answer</a>
+
+                        <div class="carouselImage">
+                            <img src="images/bits.png">
+                        </div>
+                    </div>
+                    <div class="carouselAnswer">
+                        <h1>Bits Calculator</h1>
+                        <p>
+                            OK, so, we have a variable for each thing - the bits (as part of the extension), the bytes, the kilobytes the megabytes and the gigabytes, and, we'll just reuse these multiple times.
+                            <br />OK, so, first we'll do the "bytes to kilobytes" one - of course, asking them to enter the number of bytes.
+                            <br />So, first, I'll calculate all of them, then I'll print them to the screen - we're dividing each of them by 1024 at each stage.
+                            <br />So, first we calculate the kilobytes, then we use that kilobytes variable to calculate the megabytes and we use that variable to calculate the gigabytes.
+                            <br />Then, I'll print all of them to the screen.
+                            <br />
+                            <br />OK, now, for the gigabytes to bytes, it's the same but with multiplying by 1024 instead.
+                            <br />
+                            <br />And, on the "bits" one, we just multiply the "bits" they entered by "8", then put that into the bytes variable, and from that point it's all the same.
+
+                        </p>
+
+                        <div class="carouselAnswerCode">
+                            <pre>
+                            <code class="language-csharp nonEp11Code">
+
+float bits;
+float bytes;
+float kilobytes;
+float megabytes;
+float gigabytes;
+
+Console.WriteLine("Enter a number of bytes");
+bytes = float.Parse(Console.ReadLine());
+
+kilobytes = bytes / 1024;
+megabytes = kilobytes / 1024;
+gigabytes = megabytes / 1024;
+
+Console.WriteLine("Kilobytes: " + kilobytes);
+Console.WriteLine("Megabytes: " + megabytes);
+Console.WriteLine("Gigabytes: " + gigabytes);
+
+Console.WriteLine("Enter a number of gigabytes");
+gigabytes = float.Parse(Console.ReadLine());
+
+megabytes = gigabytes * 1024;
+kilobytes = megabytes * 1024;
+bytes = kilobytes * 1024
+bits = bytes * 8;
+
+Console.WriteLine("Bits (extension): " + bits);
+Console.WriteLine("Bytes: " + bytes);
+Console.WriteLine("Kilobytes: " + kilobytes);
+Console.WriteLine("Megabytes: " + megabytes);
+
+Console.WriteLine("Enter a number of bits");
+bits = float.Parse(Console.ReadLine());
+
+bytes = bits / 8
+kilobytes = bytes / 1024;
+megabytes = kilobytes / 1024;
+gigabytes = megabytes / 1024;
+
+Console.WriteLine("Kilobytes: " + kilobytes);
+Console.WriteLine("Megabytes: " + megabytes);
+Console.WriteLine("Gigabytes: " + gigabytes);
+Console.ReadLine();
+
+                            </code>
+                            <code class="language-csharp ep11Code">
+
+// Ask them to enter some bytes.
+Console.WriteLine("Enter a number of bytes");
+float bytes = float.Parse(Console.ReadLine());
+
+// Calculate the kilobytes, megabytes and gigabytes.
+float kilobytes = bytes / 1024;
+float megabytes = kilobytes / 1024;
+float gigabytes = megabytes / 1024;
+
+Console.WriteLine("Kilobytes: " + kilobytes);
+Console.WriteLine("Megabytes: " + megabytes);
+Console.WriteLine("Gigabytes: " + gigabytes);
+
+// Ask them for a number of gigabytes.
+Console.WriteLine("Enter a number of gigabytes");
+gigabytes = float.Parse(Console.ReadLine());
+
+megabytes = gigabytes * 1024;
+kilobytes = megabytes * 1024;
+bytes = kilobytes * 1024
+bits = bytes * 8;
+
+// Write all of them out now.
+Console.WriteLine("Bits (extension): " + bits);
+Console.WriteLine("Bytes: " + bytes);
+Console.WriteLine("Kilobytes: " + kilobytes);
+Console.WriteLine("Megabytes: " + megabytes);
+
+// Finally, ask them to enter a number of bits.
+Console.WriteLine("Enter a number of bits");
+bits = float.Parse(Console.ReadLine());
+
+// Calculate what all of those bits create.
+bytes = bits / 8
+kilobytes = bytes / 1024;
+megabytes = kilobytes / 1024;
+gigabytes = megabytes / 1024;
+
+// Write all of those out now.
+Console.WriteLine("Kilobytes: " + kilobytes);
+Console.WriteLine("Megabytes: " + megabytes);
+Console.WriteLine("Gigabytes: " + gigabytes);
+Console.ReadLine();
+                            </code>
+                        </pre>
+                        </div>
+                        <a class="carouselEp11Text">Episode 11 Adjustments</a>
+                        <a class="carouselShowQuestion">Show Question</a>
+                    </div>
+                </div>
+                <div class="carouselItem">
+                    <div class="carouselQuestion">
+                        <h1>BMI Calculator</h1>
+                        <p>
+                            <b>This is the hardest, but, it's going to be REALLY rewarding if you work it out - with the extension!</b>
+                            Make a program that will input your height (in m) and weight (in kg), and calculate your BMI.
+                            <br />To calculate your BMI, just divide the weight by the height squared (weight / height²)
+                            <br />To do a squared, you can just do the height multiplied by itself (height * height);
+                            <br />Remember your brackets - you want to work out the square of "height" first - then divide weight by that!
+                            <br />
+                            <br />
+
+                            <b>NOTE: In C#, the operator to divide is "/" and the operator to multiply is "*"!</b>
+                        </p>
+
+                        <div class="carouselExtension">
+                            <h3>Extension</h3>
+                            <p>
+                                Once you've gotten that working, try getting it to ask for a <b>second</b> weight and height, but this time get them to enter the weight in pounds and inches.
+                                <br />Then, in order to calculate BMI, you need to do the same as before, except you times the whole thing by 703!
+                            </p>
+                            <pre><code>703 * (weight / height²)</code></pre>
+
+                            <p>
+                                <b>If you want to go further, you can even get it to print all of the calculations it does.</b>
+                            </p>
+                        </div>
+
+                        <a class="carouselShowAnswer">Show Answer</a>
+                        <div class="carouselImage">
+                            <img src="images/bmi.png">
+                        </div>
+                    </div>
+                    <div class="carouselAnswer">
+                        <h1>BMI Calculator</h1>
+                        <p>
+                            First, let's define all of our variables - we're going to create a "weight" and "height", then we're going to create a "bmiAnswer", which is where our final calculation will go.
+                            <br />We're going to re-use "weight" and "height" twice (because of the extension), because there's no need to make any extra variables.
+                            <br />Next, we'll ask them to enter their weight and height, of course.
+                            <br />Then, we calculate it. We have the "height * height" in brackets because we want to work that out <i>first</i>, and <i>then</i> divide the weight by it. And, then, we print out the result, and we print it out with the calculation
+                            it was doing.
+                            <br />
+                            <br />
+
+                            <b>EXTENSION</b>
+                            Now, we do the extension. So, we ask them for their height and weight again.
+                            <br />But, now, when we calculate, we multiply the entire thing by "703".
+                            <br />We've put the calculation in brackets, because that means it will work that out first - so, this is how it would calculate if "weight" was 6 and "height" was 3:
+                            <br />
+
+                            <code>703 * (6 / (3 * 3))</code>
+                            <br />
+                            <code>703 * (6 / 9)</code>
+                            <br />
+                            <code>703 * 0.66...</code>
+                            <br />
+                            <code>468.666667</code>
+                            <br />
+                        </p>
+
+                        <div class="carouselAnswerCode">
+                            <pre>
+                            <code class="language-csharp nonEp11Code">
+
+float weight;
+float height;
+float bmiAnswer;
+
+Console.WriteLine("Enter your weight (in kg)");
+weight = float.Parse(Console.ReadLine());
+
+Console.WriteLine("Enter your height (in m)");
+height = float.Parse(Console.ReadLine());
+
+bmiAnswer = weight / (height * height);
+Console.WriteLine(weight + " / (" + height + " * " + height + ") = " + bmiAnswer);
+
+Console.WriteLine("Enter your weight (in lbs)");
+weight = float.Parse(Console.ReadLine());
+
+Console.WriteLine("Enter your height (in in)");
+height = float.Parse(Console.ReadLine());
+
+bmiAnswer = 703 * (weight / (height * height));
+Console.WriteLine("703 * (" + weight + " / (" + height + " * " + height + ")) = " + bmiAnswer);
+Console.ReadLine();
+
+                            </code>
+                            <code class="language-csharp ep11Code">
+
+// Ask them for their weight.
+Console.WriteLine("Enter your weight (in kg)");
+float weight = float.Parse(Console.ReadLine());
+
+// Ask them for their height.
+Console.WriteLine("Enter your height (in m)");
+float height = float.Parse(Console.ReadLine());
+
+// Calculate that BMI and print it out.
+float bmiAnswer = weight / (height * height);
+Console.WriteLine(weight + " / (" + height + " * " + height + ") = " + bmiAnswer);
+
+// Ask them for their weight in pounds.
+Console.WriteLine("Enter your weight (in lbs)");
+weight = float.Parse(Console.ReadLine());
+
+// Ask them for their weight in inches.
+Console.WriteLine("Enter your height (in in)");
+height = float.Parse(Console.ReadLine());
+
+// Calculate that BMI and print it out.
+bmiAnswer = 703 * (weight / (height * height));
+Console.WriteLine("703 * (" + weight + " / (" + height + " * " + height + ")) = " + bmiAnswer);
+Console.ReadLine();
+                            </code>
+                            </pre>
+                        </div>
+                        <a class="carouselEp11Text">Episode 11 Adjustments</a>
+                        <a class="carouselShowQuestion">Show Question</a>
+                    </div>
+                </div>
+            </div>
+            <!--
+
+=======================================
+SELECTION
+=======================================
+
+-->
+            <div class="carouselGroup">
+                <div class="carouselItem">
+                    <div class="carouselQuestion">
+                        <h1>Grade Calculator</h1>
+                        <p>
+                            Right, then let's make a fake little grade calculator. So, you give the program a percentage, and it will say whether that's an "A*, A, B, C, D etc."
+                            <br>These are the numbers we will be using:
+                            <br>
+                            <code>91 - 100% = A*</code>
+                            <br>
+                            <code>81 - 90% = A</code>
+                            <br>
+                            <code>71 - 80% = B</code>
+                            <br>
+                            <code>61 - 70% = C</code>
+                            <br>
+                            <code>51 - 60% = D</code>
+                            <br>
+                            <code>Below 50% = E</code>
+                            <br>
+                            <br>Use integers - not floats for this one.
+                            <br>
+                            <br>
+
+                            <b>IMPORTANT TIP</b>
+                            <br>You have to use "else if" on this one. Because if you say something like <code>if (percentage &gt; 90)</code> and then later on say <code>if (percentage &gt; 80)</code>, then it will run both of them.
+                            <br>So, in that scenario, if you got "96%", the first if statement would run, because your percentage is higher than "91", it will run that first "if" statement, and your grade will be "A*", but, then because all the others will
+                            also run, that "A*" would be overwritten with an "D" by the <code>if (percentage &gt; 50)</code>.
+                            <br>
+                            <br>However, if you did <code>if (percentage &gt; 90)</code>, followed by <code>else if (percentage &gt; 80)</code>, then it won't run that second if, if the percentage was above 91, so that doesn't happen.
+                            <br>So, use "else if"s.
+
+                        </p>
+
+                        <div class="carouselExtension">
+                            <h3>Extension</h3>
+                            <p>
+                                If you got "0%", you could try to get it to output "U" - it's actually a little more tricky than you might think.
+                            </p>
+                        </div>
+
+                        <a class="carouselShowAnswer">Show Answer</a>
+                        <div class="carouselImage">
+                            <img src="images/calculator.png">
+                        </div>
+                    </div>
+                    <div class="carouselAnswer">
+                        <h1>Grade Calculator</h1>
+                        <p>
+                            This one was already explained in the video, here's the code.
+                        </p>
+
+                        <div class="carouselAnswerCode">
+                            <pre>
+                            <code class="language-csharp nonEp11Code">
+int percentage;
+string grade;
+grade = "";
+
+Console.WriteLine("Enter the percentage you got.");
+percentage = int.Parse(Console.ReadLine());
+
+if (percentage &gt; 90)
+    grade = "A*";
+else if (percentage &gt; 80)
+    grade = "A";
+else if (percentage &gt; 70)
+    grade = "B";
+else if (percentage &gt; 60)
+    grade = "C";
+else if (percentage &gt; 50)
+    grade = "D";
+else if (percentage &lt;= 50)
+    grade = "E";
+if (percentage == 0)
+    grade = "U";
+
+Console.WriteLine("You got: " + grade);
+Console.ReadLine();
+                            </code>
+                            <code class="language-csharp ep11Code">
+string grade = "";
+
+// Ask them what percentage they got.
+Console.WriteLine("Enter the percentage you got.");
+int percentage = int.Parse(Console.ReadLine());
+
+// Depending on that percentage, we'll change the grade.
+if (percentage &gt; 90)
+    grade = "A*";
+else if (percentage &gt; 80)
+    grade = "A";
+else if (percentage &gt; 70)
+    grade = "B";
+else if (percentage &gt; 60)
+    grade = "C";
+else if (percentage &gt; 50)
+    grade = "D";
+else if (percentage &lt;= 50)
+    grade = "E";
+if (percentage == 0)
+    grade = "U";
+
+// Finally, print out that grade.
+Console.WriteLine("You got: " + grade);
+Console.ReadLine();
+                            </code>
+                            </pre>
+                        </div>
+                        <a class="carouselEp11Text">Episode 11 Adjustments</a>
+                        <a class="carouselShowQuestion">Show Question</a>
+                    </div>
+                </div>
+                <div class="carouselItem">
+                    <div class="carouselQuestion">
+                        <h1>Better Calculator</h1>
+                        <p>
+                            OK, let's extend our calculator from before, so, it will still ask you to enter two numbers, but, then, at the end, it will ask you what kind of calculation you want to do.
+                            <br />So, it asks me to enter to two numbers, but, then it will ask me if I want to do addition (by typing a "+"), subtracting (by typing a "-"), multiplication (by typing a "*") or division (by typing a "/").
+                            <br>Once you've chosen, the program will then do that kind of calculation.
+                            <br />
+                            <br />So, if I enter "14" and "17" and then type "*", it will do "14 * 17". Look at the console below to see how it should work.
+                        </p>
+
+                        <div class="carouselExtension">
+                            <h3>Extension</h3>
+                            <p>
+                                Then, get it to write the sum that it did - this isn't actually that hard, as you'll see in the answer.
+                            </p>
+                            <pre><code>703 * 2 = 1406</code></pre>
+                        </div>
+
+                        <a class="carouselShowAnswer">Show Answer</a>
+                        <div class="carouselImage">
+                            <img src="images/calculator.png">
+                        </div>
+                    </div>
+                    <div class="carouselAnswer">
+                        <h1>Better Calculator</h1>
+                        <p>
+                            Right, now, in this program, we'll have the firstNumber, secondNumber, calculation and answer stored in variables.
+                            <br>The "calculation" variable will store what calculation they enter when they are asked to choose either "+", "-", "*" or "/"
+                            <br>So, we'll ask them for the first and second numbers first, of course.
+                            <br>Then, we'll ask them for what calculation they want to do. Then this is where the selection comes in.
+                            <br>
+                            <br>So, if they typed "+", then we'll add the two numbers and put that into the "answer" variable.
+                            <br>If they typed "-", then we'll subtract the two numbers and put that into the "answer" variable.
+                            <br>And so on.
+                            <br>
+                            <br>
+                            <b>We're using "else if" here, but it would technically work with just "if" statements as well, if you used those.</b> 
+                            <br>
+                            <br>Then, we print the result out - now, this is actually really simple. Since, we stored what calculation they wanted to do in the "calculation" variable, we just print that out.
+                            <br>That <code>+ " " +</code> is actually adding a space because there's a space in-between those quotes, it is joining a space in, so that's what that's for.
+                        </p>
+
+                        <div class="carouselAnswerCode">
+                            <pre>
+                            <code class="language-csharp nonEp11Code">
+int firstNumber;
+int secondNumber;
+int answer;
+string calculation;
+answer = 0;
+
+Console.WriteLine("Enter a number.");
+firstNumber = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Enter another number.");
+secondNumber = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Choose a calculation. (+, -, *, /)");
+calculation = Console.ReadLine();
+
+if (calculation == "+")
+{
+    answer = firstNumber + secondNumber;
+} else if (calculation == "-") {
+    answer = firstNumber - secondNumber;
+} else if (calculation == "*") {
+    answer = firstNumber * secondNumber;
+} else if (calculation == "/") {
+    answer = firstNumber / secondNumber;
+}
+
+Console.WriteLine(firstNumber + " " + calculation + " " + secondNumber + " = " + answer);
+Console.ReadLine();
+                            </code>
+                            <code class="language-csharp ep11Code">
+int answer = 0;
+
+// Ask them for the first number.
+Console.WriteLine("Enter a number.");
+int firstNumber = int.Parse(Console.ReadLine());
+
+// Ask them for the second number.
+Console.WriteLine("Enter another number.");
+int secondNumber = int.Parse(Console.ReadLine());
+
+// Ask them for what type of calculation they want to do.
+Console.WriteLine("Choose a calculation. (+, -, *, /)");
+string calculation = Console.ReadLine();
+
+// Then, we will perform that operation on the two numbers, and put the result into the "answer" variable - we're doing this in order to save duplication of the WriteLine at the bottom.
+if (calculation == "+")
+    answer = firstNumber + secondNumber;
+else if (calculation == "-")
+    answer = firstNumber - secondNumber;
+else if (calculation == "*")
+    answer = firstNumber * secondNumber;
+else if (calculation == "/")
+    answer = firstNumber / secondNumber;
+
+Console.WriteLine(firstNumber + " " + calculation + " " + secondNumber + " = " + answer);
+Console.ReadLine();
+                            </code>
+                            </pre>
+                        </div>
+                        <a class="carouselEp11Text">Episode 11 Adjustments</a>
+                        <a class="carouselShowQuestion">Show Question</a>
+                    </div>
+                </div>
+                <div class="carouselItem">
+                    <div class="carouselQuestion">
+                        <h1>Text Length Comparer</h1>
+                        <p>
+                            So, in this program you input two strings - the first string and the second string, and you say which string is longer - the first or second.
+                            <br />If they're both the same just say "they're both the same!"
+                            <br /><b>IMPORTANT: In order to get the length of a string use "theString.Length" - replace "theString" with your string of course.</b>
+                        </p>
+
+                        <div class="carouselExtension">
+                            <h3>Extension</h3>
+                            <p>
+                                Once you've gotten that working, then get it to <i>also</i> tell you <i>how much</i> longer that string is.
+                            </p>
+                            <pre><code>First String: 'hello' is longer by 4 letters</code></pre>
+                        </div>
+
+                        <a class="carouselShowAnswer">Show Answer</a>
+                        <div class="carouselImage">
+                            <img src="images/calculator.png">
+                        </div>
+                    </div>
+                    <div class="carouselAnswer">
+                        <h1>Text Length Comparer</h1>
+                        <p>
+                            So, first we input the two strings - that's pretty easy and simple.
+                            <br>Then we have some if statements here - so, first we check if they are both the same length, if so we output that.
+                            <br>Next, we ask if the first string is bigger than the second string, and if so, we say that it is bigger.
+                            <br>As a part of the extension, we also calculate by how much, simply by subtracting the length of it from the other string's length.
+                            <br>And, we do the same for the second string as well.
+                            <br>And that's it!
+                        </p>
+
+                        <div class="carouselAnswerCode">
+                            <pre>
+                            <code class="language-csharp nonEp11Code">
+string firstString;
+string secondString;
+
+Console.WriteLine("Enter your first string.");
+firstString = Console.ReadLine();
+
+Console.WriteLine("Enter your second string.");
+secondString = Console.ReadLine();
+
+if (firstString.Length == secondString.Length) {
+    Console.WriteLine("They're both the same!");
+} else if (firstString.Length &gt; secondString.Length) {
+    Console.WriteLine("First string: '" + firstString + "' is bigger by " + (firstString.Length - secondString.Length));
+} else if (secondString.Length &gt; firstString.Length) {
+    Console.WriteLine("Second string: '" + secondString + "' is bigger by " + (secondString.Length - firstString.Length));
+}
+
+Console.ReadLine();
+                            </code>
+                            <code class="language-csharp ep11Code">
+
+// Asks them for the first string.
+Console.WriteLine("Enter your first string.");
+string firstString = Console.ReadLine();
+
+// Asks them for the second string.
+Console.WriteLine("Enter your second string.");
+string secondString = Console.ReadLine();
+
+// If they're equal, say that they're equal.
+if (firstString.Length == secondString.Length)
+    Console.WriteLine("They're both the same!");
+// If the first string is bigger than the second, say so.
+else if (firstString.Length &gt; secondString.Length)
+    Console.WriteLine("First string: '" + firstString + "' is bigger by " + (firstString.Length - secondString.Length));
+// Otherwise, if the second string is bigger than the first, say so.
+else if (secondString.Length &gt; firstString.Length)
+    Console.WriteLine("Second string: '" + secondString + "' is bigger by " + (secondString.Length - firstString.Length));
+
+Console.ReadLine();
+                                                            </code>
+                            </pre>
+                        </div>
+                        <a class="carouselEp11Text">Episode 11 Adjustments</a>
+                        <a class="carouselShowQuestion">Show Question</a>
+                    </div>
+                </div>
+            </div>
+            <!--
+
+=======================================
+ITERATION
+=======================================
+
+-->
+
+            <div class="carouselGroup">
+                <div class="carouselItem">
+                    <div class="carouselQuestion">
+                        <h1>FizzBuzz</h1>
+                        <p>
+                            This is a very common interview question - this is used as a test of how neat you can make your code usually, but, we're not going to worry about that.
+                            <br />So, the program counts from 0 to 100.
+                            <br>Then, if it's a multiple of 3, we will write "Fizz"
+                            <br />And, if it's a multiple of 5, then write "Buzz"
+                            <br />And, if it's both, write "FizzBuzz" all in one word.
+                        </p>
+
+                        <div class="carouselExtension">
+                            <h3>Extension</h3>
+                            <p>
+                                Then, if it's neither "Fizz" nor "Buzz", get it to just write the number we're currently on.
+                            </p>
+                        </div>
+
+                        <a class="carouselShowAnswer">Show Answer</a>
+                        <div class="carouselImage">
+                            <img src="images/calculator.png">
+                        </div>
+                    </div>
+                    <div class="carouselAnswer">
+                        <h1>FizzBuzz</h1>
+                        <p>
+                            Already explained in the video.
+                        </p>
+
+                        <div class="carouselAnswerCode">
+                            <pre>
+                            <code class="language-csharp nonEp11Code">
+for (int i = 0; i &lt; 100; i++)
+{
+    if (i % 3 == 0 && i % 5 == 0)
+        Console.WriteLine("FizzBuzz");
+    else if (i % 3 == 0)
+        Console.WriteLine("Fizz");
+    else if (i % 5 == 0)
+        Console.WriteLine("Buzz");
+    else
+        Console.WriteLine(i);
+}
+
+Console.ReadLine();
+                            </code>
+                            <code class="language-csharp ep11Code">
+for (int i = 0; i &lt; 100; i++)
+{
+    bool isFizz = i % 3 == 0;
+    bool isBuzz = i % 5 == 0;
+
+    if (isFizz && isBuzz)
+        Console.WriteLine("FizzBuzz");
+    else if (isFizz)
+        Console.WriteLine("Fizz");
+    else if (isBuzz)
+        Console.WriteLine("Buzz");
+    else
+        Console.WriteLine(i);
+}
+
+Console.ReadLine();
+                            </code>
+                            </pre>
+                        </div>
+                        <a class="carouselEp11Text">Episode 11 Adjustments</a>
+                        <a class="carouselShowQuestion">Show Question</a>
+                    </div>
+                </div>
+
+                <div class="carouselItem">
+                    <div class="carouselQuestion">
+                        <h1>The Ultimate Adder</h1>
+                        <p>
+                            This program will add as many numbers as you want together... Make sure to look at the console for this one.
+                            <br />So, first, the program asks the user how many numbers they want to add together.
+                            <br>Then, it ask them to enter all of those numbers.
+                            <br />Then it outputs all of those numbers added together.
+                            <br>If you really really get stuck, you can look at the answer - but make sure you definitely understand how it's done in the answer before moving on.
+                            <br /><b>TIP: The simplest way of doing this is: Inside the loop, everytime they enter a number, it adds that number to a "total" variable - so, something like "total = total + numberEntered".</b>
+                        </p>
+
+                        <div class="carouselExtension">
+                            <h3>Extension</h3>
+                            <p>
+                                Make it so the whole program loops, so, once they get to the end it goes back to the beginning.
+                                <i>TIP: while (true)</i>
+                            </p>
+                        </div>
+
+                        <a class="carouselShowAnswer">Show Answer</a>
+                        <div class="carouselImage">
+                            <img src="images/calculator.png">
+                        </div>
+                    </div>
+                    <div class="carouselAnswer">
+                        <h1>The Ultimate Adder</h1>
+                        <p>
+                            So, in this, we create a variable called "total" - everytime the user enters another number, it will add to the thing.
+                            <br>Then, we, of course, actually ask them to input how many numbers they want to add together.
+                            <br>After that, we use a "for" loop in order to go enter a specific amount of number - so, if "numberOfNumbersToAdd" is "3", the code inside the for loop will run 3 times - if it's 4, the code inside the for loop will run 4 times.
+                            <br>Then, we ask them to enter that number, and we take the number they entered, and add it to the total - so, if total was "5", and they entered "3", it will become "8"
+                            <br>And, finally, we output the total at the end!
+                            <br>Oh, and, for the extension, we wrap the whole thing in a "while (true)", so it will never end unless you press the close button.
+                        </p>
+
+                        <div class="carouselAnswerCode">
+                            <pre>
+                            <code class="language-csharp nonEp11Code">
+
+while (true) {
+
+    int total;
+    int numberOfNumbersToAdd;
+    total = 0;
+
+    Console.WriteLine("Enter the amount of numbers you want to add together.");
+    numberOfNumbersToAdd = int.Parse(Console.ReadLine());
+
+    for (int i = 0; i &lt; numberOfNumbersToAdd; i++) {
+
+        int enteredNumber;
+
+        Console.WriteLine("Enter number " + (i + 1));
+        enteredNumber = int.Parse(Console.ReadLine());
+
+        total = total + enteredNumber;
+
+    }
+
+    Console.WriteLine("The final total is: " + total);
+    Console.ReadLine();
+
+}
+                            </code>
+                            <code class="language-csharp ep11Code">
+// Make the code run infinitely.
+while (true) {
+
+    // We'll add to this total everytime the user inputs another number.
+    int total = 0;
+
+    // Ask the user how many numbers they want to enter.
+    Console.WriteLine("Enter the amount of numbers you want to add together.");
+    int numberOfNumbersToAdd = int.Parse(Console.ReadLine());
+
+    // Then, for each of those numbers, we'll add to the total.
+    for (int i = 0; i &lt; numberOfNumbersToAdd; i++) {
+
+        Console.WriteLine("Enter number " + (i + 1));
+        int enteredNumber = int.Parse(Console.ReadLine());
+
+        // Add to the total.
+        total += enteredNumber;
+
+    }
+
+    // Once all of that is over, we'll print the final total.
+    Console.WriteLine("The final total is: " + total);
+    Console.ReadLine();
+
+}
+                            </code>
+                        </pre>
+                        </div>
+                        <a class="carouselEp11Text">Episode 11 Adjustments</a>
+                        <a class="carouselShowQuestion">Show Question</a>
+                    </div>
+                </div>
+
+                <div class="carouselItem">
+                    <div class="carouselQuestion">
+                        <h1>The Mean Calculator</h1>
+                        <p>
+                            This task is <b>extremely</b> similar to the "ultimate" adder.
+                            <br>This program will work out the "mean" which is an average used in maths to give a rough idea of a list of numbers.
+                            <br>Calculating the mean is very easily, you add all of the numbers up into a total (like we did in the ultimate adder task), then divide that by how many items there are.
+                            <br>So, extend the ultimate adder to calculate the mean by taking the total at the end and dividing it by the total number of items.
+                            <br><b>NOTE: When you divide the number, you'll need to put it into a "float".</b>
+                        </p>
+
+                        <div class="carouselExtension">
+                            <h3>Extension</h3>
+                            <p>
+                                Don't let them say "0" items.
+                            </p>
+                        </div>
+
+                        <a class="carouselShowAnswer">Show Answer</a>
+                        <div class="carouselImage">
+                            <img src="images/calculator.png">
+                        </div>
+                    </div>
+                    <div class="carouselAnswer">
+                        <h1>The Mean Calculator</h1>
+                        <p>
+                            Exactly like the ultimate adder, except at the end we divide their number by how many numbers they gave.
+                            <br>Also, as a part of the extension, we're checking if they chose to process 0 items, in which case, we'll reject it.
+                        </p>
+
+                        <div class="carouselAnswerCode">
+                            <pre>
+                            <code class="language-csharp nonEp11Code">
+
+while (true) {
+
+    int total;
+    int numberOfNumbersToAdd;
+    float mean;
+    total = 0;
+
+    Console.WriteLine("Enter the amount of numbers you want to process.");
+    numberOfNumbersToAdd = int.Parse(Console.ReadLine());
+
+    if (numberOfNumbersToAdd == 0)
+        Console.WriteLine("You can't process 0 numbers!");
+    else {
+        for (int i = 0; i &lt; numberOfNumbersToAdd; i++) {
+
+            int enteredNumber;
+
+            Console.WriteLine("Enter number " + (i + 1));
+            enteredNumber = int.Parse(Console.ReadLine());
+
+            total = total + enteredNumber;
+
+        }
+
+        mean = total / numberOfNumbersToAdd;
+
+        Console.WriteLine("The mean is: " + mean);
+    }
+    Console.ReadLine();
+
+}
+                            </code>
+                            <code class="language-csharp ep11Code">
+// Make the code run infinitely.
+while (true) {
+
+    // We'll add to this total everytime the user inputs another number.
+    int total = 0;
+
+    // Ask the user how many numbers they want to enter.
+    Console.WriteLine("Enter the amount of numbers you want to process");
+    int numberOfNumbersToAdd = int.Parse(Console.ReadLine());
+
+    if (numberOfNumbersToAdd == 0)
+        Console.WriteLine("You can't process 0 numbers!");
+    else {
+
+        // Then, for each of those numbers, we'll add to the total.
+        for (int i = 0; i &lt; numberOfNumbersToAdd; i++) {
+
+            Console.WriteLine("Enter number " + (i + 1));
+            int enteredNumber = int.Parse(Console.ReadLine());
+
+            // Add to the total.
+            total += enteredNumber;
+
+        }
+
+        // And, finally, we'll calculate the mean, and print out the result.
+        float mean = total / numberOfNumbersToAdd;
+
+        Console.WriteLine("The mean is: " + mean);
+    }
+
+    Console.ReadLine();
+}
+                            </code>
+                        </pre>
+                        </div>
+                        <a class="carouselEp11Text">Episode 11 Adjustments</a>
+                        <a class="carouselShowQuestion">Show Question</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--
+
+=======================================
+ARRAYS
+=======================================
+
+-->
+
+            <div class="carouselGroup">
+                <div class="carouselItem">
+                    <div class="carouselQuestion">
+                        <h1>The Shopping List</h1>
+                        <p>
+                            This task was done in the video, <b>if you want to debug it for yourself, copy and paste the answer into Visual Studio!</b>
+                        </p>
+
+                        <div class="carouselExtension">
+                            <h3>Extension</h3>
+                            <p>
+                                Make it so when the user adds an item to the shopping list, it doesn't let them add blank items.
+                                <br><b>This extension wasn't done in the video.</b>
+                            </p>
+                        </div>
+
+                        <a class="carouselShowAnswer">Show Answer</a>
+                        <div class="carouselImage">
+                            <img src="images/arrays.png">
+                        </div>
+                    </div>
+                    <div class="carouselAnswer">
+                        <h1>The Shopping List</h1>
+                        <p>
+                            Explained in the video.
+                            <b>THIS INCLUDES THE EXTENSION - WHICH WAS NOT DONE IN THE VIDEO!</b>
+                        </p>
+
+                        <div class="carouselAnswerCode">
+                            <pre>
+                        <code class="language-csharp">
+// Create a list to contain all of the items in their shopping list.
+List&lt;string&gt; shoppingList = new List&lt;string&gt;();
+
+// Loop the program forever.
+while (true)
+{
+
+    // Show all of the items in their shopping list.
+    if (shoppingList.Count == 0)
+        Console.WriteLine("You have no items in your shopping list!");
+    else
+    {
+        Console.WriteLine("Here are all of the items on your shopping list:");
+        for (int i = 0; i &lt; shoppingList.Count; i++)
+            Console.WriteLine("#" + (i + 1) + ": " + shoppingList[i]);
+    }
+
+    // Show the menu where they can choose to add or remove from the shopping list.
+    Console.WriteLine("Here's what you can do:");
+    Console.WriteLine("Type 'add' to add something to your shopping list.");
+    Console.WriteLine("Type 'remove' to remove something from your shopping list.");
+    string option = Console.ReadLine().ToLower();
+
+    // If they choose to add, add whatever they choose to the shopping list.
+    if (option == "add")
+    {
+        string toAdd = "";
+        
+        // Keep on asking them until they enter something that isn't blank.
+        while (toAdd != "") {
+            Console.WriteLine("Type what you want to add to the list.");
+            toAdd = Console.ReadLine();
+        }
+
+        shoppingList.Add(toAdd);
+    }
+
+    // If they choose to remove, remove whatever they choose from the shopping.
+    else if (option == "remove")
+    {
+        Console.WriteLine("Type in the number for which item you want to remove - you'll find the numbers next to the items in your shopping list");
+        int choice = int.Parse(Console.ReadLine()) - 1;
+
+        // Stop them if they entered an invalid number.
+        if (choice &lt; 0 || choice &gt;= shoppingList.Count)
+        {
+            Console.WriteLine("Hey! That wasn't a valid number.");
+            continue;
+        }
+
+        // If they weren't stopped by the "if" above, then go ahead and remove the item.
+        shoppingList.RemoveAt(choice);
+    }
+    else Console.WriteLine("That wasn't a valid option!");
+}
+                        </code>
+                    </pre>
+                        </div>
+                        <a class="carouselShowQuestion">Show Question</a>
+                    </div>
+                </div>
+                <div class="carouselItem">
+                    <div class="carouselQuestion">
+                        <h1>Biggest Number Calculator</h1>
+                        <p>
+                            Make a program that recieves an <i>integer</i> array from the user, and goes through every single item in an array, and finds the largest number in it.
+                            <br>To do this, make a variable called "biggestNumber" that starts off as "0".
+                            <br>Then, check each item (in a loop) and see if it's bigger than the "biggestNumber" variable.
+                            <br>If it <i>is</i> bigger than the "biggestNumber" variable, then set the "biggestNumber" to <i>that</i> item, otherwise, don't do anything.
+                            <br>Then, simply output what "biggestNumber" is after the whole loop, and it will tell you which number was the biggest!
+                        </p>
+
+                        <div class="carouselExtension">
+                            <h3>Extension</h3>
+                            <p>
+                                If there are <i>no</i> items in the array, it will say "0", since "biggestNumber" starts of as "0", but that's technically wrong.
+                                <br>So, don't do anything if there are no items in the array (Hint: If the length of the array is 0)
+                            </p>
+                        </div>
+
+                        <a class="carouselShowAnswer">Show Answer</a>
+                        <div class="carouselImage">
+                            <img src="images/arrays.png">
+                        </div>
+                    </div>
+                    <div class="carouselAnswer">
+                        <h1>Biggest Number Calculator</h1>
+                        <p>
+                            We start by asking the user for all of the items they want in the array, and we put them into the array.
+                            <br>As the extension, if the array had nothing in it, we say so.
+                            <br>Otherwise, we make the "biggestNumber" variable, as we said, and we go through each item in the array and compare them against that variable.
+                            <br>If an item is bigger, we set the "biggestNumber" to that item in the array instead.
+                            <br>Finally, we output what the "biggestNumber" is.
+                        </p>
+
+                        <div class="carouselAnswerCode">
+                        <pre>
+                            <code class="language-csharp">
+Console.WriteLine("Input how many items are in the array.");
+int numberOfItems = int.Parse(Console.ReadLine());
+
+if (numberOfItems == 0)
+    Console.WriteLine("There are no items in the array!");
+else {
+    int[] arr = new int[numberOfItems];
+
+    for (int i = 0; i &lt; arr.Length; i++) {
+        Console.WriteLine("Enter number #" + (i + 1));
+        arr[i] = int.Parse(Console.ReadLine());
+    }
+
+    int biggestNumber = 0;
+    for (int i = 0; i &lt; arr.Length; i++)
+        if (arr[i] > biggestNumber)
+            biggestNumber = arr[i];
+
+    Console.WriteLine("The biggest number is: " + biggestNumber);
+}
+
+
+                            </code>
+                        </pre>
+                        </div>
+                        <a class="carouselShowQuestion">Show Question</a>
+                    </div>
+                </div>
+                <div class="carouselItem">
+                    <div class="carouselQuestion">
+                        <h1>"FX" table</h1>
+                        <p>
+                            Alright, this is a bit of a maths one!
+                            <br>Imagine you have a table with three columns - you've got "f", "x" and "fx".
+                            <br>What happens is the third column, "fx" is "f" multiplied by "x"... Take a look at the table below to get an idea of what's going on here.
+
+                            <table>
+                                <tr>
+                                    <th>f</th>
+                                    <th>x</th>
+                                    <th>fx</th>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>5</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>4</td>
+                                    <td>24</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>9</td>
+                                    <td>45</td>
+                                </tr>
+                            </table>
+
+                            <br>The task is to make a program that will take in all of the "f"s and all of the "x"s, and work out the "fx"s.
+                            <br>
+                            <br>Take a look at the console for a good demo of how this program should work!
+                            <br>
+                            <br>Technically, if you were just showing the results straight away as they entered the values, this wouldn't need arrays, but, because we're showing the results <b>after</b> they've entered all the values in, we have to remember
+                            what all of the "f"s and "x"s are.
+
+                            <br><b>NOTE: You will need TWO integer arrays for this one - one will hold all of the "f"s, and the other will hold all of the "x"s.</b>
+
+                            <br>
+                            <br>So, initialize the two arrays to the correct size, then use one "for" loop to input all the "f"s and "x"s, then, after that "for" loop another loop that will work out the "fx"s from those values in the arrays and print them
+                            out.
+                        </p>
+
+                        <div class="carouselExtension">
+                            <h3>Extension</h3>
+                            <p>
+                                When they're inputting the "f"s and "x"s, say which item they're currently inputting (e.g. )
+                            </p>
+                        </div>
+
+                        <a class="carouselShowAnswer">Show Answer</a>
+                        <div class="carouselImage">
+                            <img src="images/arrays.png">
+                        </div>
+                    </div>
+                    <div class="carouselAnswer">
+                        <h1>"FX" table</h1>
+                        <p>
+                            First, we ask for how many items.
+                            <br>Next, we create the "f" and "x" arrays, as said in the question.
+                            <br>Then, we ask the user to input those values, and those values go into the arrays at the correct places.
+                            <br>Finally, we print out all of the results!
+                        </p>
+
+                        <div class="carouselAnswerCode">
+                            <pre>
+                        <code class="language-csharp">
+
+// Ask the user how many rows they will have.
+Console.WriteLine("Choose how many rows you want in the table.");
+int numberOfRows = int.Parse(Console.ReadLine());
+
+// Create the two arrays that will contain this.
+int[] allF = new int[numberOfRows];
+int[] allX = new int[numberOfRows];
+
+// Now, ask them for all of their values.
+for (int i = 0; i &lt; numberOfRows; i++) {
+
+    Console.WriteLine("Enter the 'f' for row #" + (i + 1));
+    allF[i] = int.Parse(Console.ReadLine());
+
+    Console.WriteLine("Enter the 'x' for row #" + (i + 1));
+    allX[i] = int.Parse(Console.ReadLine());
+
+}
+
+// Finally, print out all of the results!
+for (int i = 0; i &lt; numbersOfRows; i++) {
+
+    int fx = allF[i] * allX[i];
+    Console.WriteLine(allF[i] + " x " + allX[i] + " = " + fx);
+
+}
+
+Console.ReadLine();
+
+                        </code>
+                    </pre>
+                        </div>
+                        <a class="carouselShowQuestion">Show Question</a>
+                    </div>
+                </div>
+                <div class="carouselItem">
+                    <div class="carouselQuestion">
+                        <h1>Standard Deviation</h1>
+                        <p>
+                            <b>NOTE: This one is quite a challenge and quite a long one too, but definitely worth it!</b>
+                            <br>One thing you can calculate in maths is something called the <b>standard deviation</b>, and it's a very long and time-consuming thing to calculate - so, we're going to write a program to calculate it for us!
+
+                            <br>
+                            <br>So, we can take a <b>list of any amount of numbers</b> and calculate the standard deviation of them, what the standard deviation is, is essentially an average of how far away from the mean all of the items are, it gives us a
+                            good idea of if the data is "skewed" in a certain direction.
+
+                            <br>
+                            <br>Alright, here's how to calculate it:
+
+                            <br>
+                            <br>1. Take in all the numbers of course, as you can see in the console, you say how many items you want to enter, and just enter them.
+                            <br>
+                            <br>2. <b>Work out the mean of all of the numbers</b>, how to work out the mean is below.
+                            <br>
+                            <br>3. We need to get the <i>sum</i> of all of the items squared. So, <b>go through every item, square them (by multiplying them by themselves), then add them to some sort of total</b> - it's exactly like with the "mean", except you
+                            square each item before adding them to the total.
+                            <br>
+                            <br>4. Take <i>that</i> total we just got and <b>divide that by the total number of items</b>, exactly like we would with the mean. Just like with the mean, put this into a <b>double</b> variable.
+                            <br>
+                            <br>5. We take the number we just calculated and subtract it from the mean <i>squared</i>. <b>So, it will look something like this: lastNumber - (mean * mean)</b>, <b>put this into a double too</b>
+                            <br>
+                            <br>6. Finally, we take that number we just got and <b>work out the square root of it, that's your final answer</b>, the square root of that number. NOTE: To work out the square root, use "variable = Math.Sqrt(number)", putting
+                            the number you want to square root inside place of the "number", of course.
+                            <br><b>NOTE: "Math.Sqrt" gives back a double, and takes in a double, so put it into a "double" variable, and make sure to give it a double too.</b>
+
+                            <br>
+                            <br>How to work out the mean:
+
+                            <br>1. Create a "total" variable.
+                            <br>2. Take all of items and add them up, into some kind of "total" variable, to do that go through each item, and within the "for" loop, for each item, just add it to the total using "+=". <b>This will need to go into a "double"!</b>
+                            <br>3. Finally, take that "total" and divide it by the number of items there are.
+
+                            <br>
+                            <br>What is a double?
+                            <br><b>A double is just a more accurate "float". Floats are 32-bits, while a double is 64-bits, so you can get more decimal places in a double</b>
+
+                            <br>
+                            <br>If you've done something wrong - you will probably get "NaN" as your final answer, check through your code carefully.
+                            <br>To check if you did it right, just enter in some numbers into the console, and enter the same numbers into your program, and you should get the same result!
+                        </p>
+
+                        <div class="carouselExtension">
+                            <h3>Extension</h3>
+                            <p>
+                                If they enter "0" when asked how many numbers to calculate the standard deviation for, don't allow it.
+                            </p>
+                        </div>
+
+                        <a class="carouselShowAnswer">Show Answer</a>
+                        <div class="carouselImage">
+                            <img src="images/arrays.png">
+                        </div>
+                    </div>
+                    <div class="carouselAnswer">
+                        <h1>Standard Deviation</h1>
+                        <p>
+                            The answer is exactly how it is described in the question.
+                        </p>
+
+                        <div class="carouselAnswerCode">
+                            <pre>
+                        <code class="language-csharp">
+
+// Ask the user how many numbers they want to use to calculate the standard deviation.
+Console.WriteLine("Choose how many numbers you want to work out the standard deviation for.");
+int numberOfItems = int.Parse(Console.ReadLine());
+
+if (numberOfItems == 0)
+    Console.WriteLine("You can't have 0 items!");
+else {
+
+    // Create an array based on that size.
+    int[] items = new int[numberOfItems];
+
+    // Ask the user to input all of those numbers.
+    Console.WriteLine("Input all the numbers you want to work out the standard deviation for:");
+    for (int i = 0; i &lt; numbersOfItems; i++) {
+        Console.WriteLine("Input Number " + (i + 1));
+        items[i] = int.Parse(Console.ReadLine());
+    }
+
+    // Work out the mean.
+    int total = 0;
+    for (int i = 0; i &lt; numberOfItems; i++)
+        total += items[i];
+
+    double mean = total / numberOfItems;
+
+    // Work out the sum of all of the items squared. Then, divide that sum by the numbers of items.
+    int squaredSum = 0;
+    for (int i = 0; i &lt; numberOfItems; i++)
+        squaredSum += items[i] * items[i];
+
+        double dividedSquareSum = squaredSum / numberOfItems;
+
+    // Do the final calculation, and work out the square root of that.
+    double beforeSquareRoot = dividedSquareSum - (mean * mean);
+    double finalResult = Math.Sqrt(beforeSquareRoot);
+
+    // Finally, print out the results - we'll also print out the mean for good measure :).
+    Console.WriteLine("Mean: " + mean);
+    Console.WriteLine("Standard Deviation: " + finalResult);
+}
+
+Console.ReadLine();
+
+
+                        </code>
+                    </pre>
+                        </div>
+                        <a class="carouselShowQuestion">Show Question</a>
+                    </div>
+                </div>
+            </div>
+            <!--
+
+=======================================
+METHODS
+=======================================
+
+-->
+            <div class="carouselGroup">
+                <div class="carouselItem">
+                    <div class="carouselQuestion">
+                        <h1>Members Only!</h1>
+                        <p>
+                            Imagine this program is used at the entrance of some place where a show is being put on. This program will let the user check if someone is allowed in.
+                            <br>Before the show, the user can enter a list of names (they say how many names first, so use an array, not a list).
+                            <br>Once they've entered in all of the names, the program will then enter into a mode that lets someone check if someone is on the list.
+                            <br>This will happen infinitely, as you can see in the console.
+                            <br>Don't worry about removing people after they've entered.
+                            <br><br><b>NOTE: Remember to turn the names into lower case! Either as they get entered into the array, or when you're checking the names, you would do that using <code>something.ToLower()</code></b>
+                            <br><br>To do this, whenever someone enters a name, you need to use the linear searching method I made in Episode 15 to look through the list of names we made at the start and see if that person is in that array. 
+                            <br><br>So, you would do something like this: <code>bool isMember = IsInArray(arr, theText);</code>, then you can just say something along the lines of <code>if (isMember == true) Console.WriteLine("You're allowed in!"); </code>, and within an "else" it will reject that person.
+                            <br>Remember to <b>debug</b> if it doesn't work.
+                            <br><br>It's OK to struggle with these tasks - <b>you may even need to re-watch the video to remind yourself of things!</b>
+                        </p>
+
+                        <div class="carouselExtension">
+                            <h3>Extension</h3>
+                            <p>
+                                Make a VIP array AND a regular members array. 
+                                <br><br>Then, when you're checking their names, say whether they're a VIP, a regular member or just not on any lists.
+                                <br><br>This would be done by checking through both the VIP list and the regular members list.
+                                <br><br><b>NOTE: People can't be on both the VIP list <i>and</i> the regular members list, so it's best to check if they're on the VIP list first, and only if they aren't do you <i>then</i> check to see if they're a regular member.</b>
+                                <br><br>Once you've done all this, take your final program and split it all up into smaller methods to keep it neater.
+                            </p>
+                        </div>
+
+                        <a class="carouselShowAnswer">Show Answer</a>
+                        <div class="carouselImage">
+                            <img src="images/arrays.png">
+                        </div>
+                    </div>
+                    <div class="carouselAnswer">
+                        <h1>Members Only!</h1>
+                        <p>
+                            First, we ask for all of the VIP members and regular members.
+                            <br><br>Then, we infinitely check people.
+                            <br><br>To check people, we first check if they're on the "VIP" array, and if so, we say so.
+                            <br><br>If they aren't on the VIP array, we then check if they're on the members array, and if they're not on that either, then we reject them.
+                        </p>
+
+                        <div class="carouselAnswerCode">
+                        <pre>
+                            <code class="language-csharp">
+static string[] MembersArr;
+static string[] VIPArr;
+
+static void Main(string[] args) {
+
+    InputVIP();
+    InputMembers();
+
+    Console.WriteLine("Alright! Now, type in a name to check if someone is on one of the lists.");
+    while (true)
+        CheckPerson();
+    
+}
+
+static void InputVIP() {
+    Console.WriteLine("How many people are there on the VIP list?");
+
+    int vipSize = int.Parse(Console.ReadLine());
+    VIPArr = new string[vipSize];
+
+    if (vipSize > 0) {
+
+        Console.WriteLine("Input all of the VIP members.");
+        for (int i = 0; i &lt; vipSize; i++) {
+            Console.WriteLine("Input member " + (i + 1));
+            vipArr[i] = Console.ReadLine().ToLower();
+        }
+
+    }
+}
+
+static void InputMembers() {
+    Console.WriteLine("How many people are there on the regular members list?");
+    int membersSize = int.Parse(Console.ReadLine());
+
+    MembersArr = new string[membersSize];
+
+    // Now, get the user to input all of those names.
+    if (membersSize > 0) {
+
+        Console.WriteLine("Input all of the regular members.");
+        for (int i = 0; i &lt; membersSize; i++) {
+            Console.WriteLine("Input member " + (i + 1));
+            membersArr[i] = Console.ReadLine().ToLower();
+        }
+
+    }
+}
+
+static void CheckPerson() {
+    Console.WriteLine("Enter a name.");
+    string input = Console.ReadLine().ToLower();
+
+    // Check if they're a VIP.
+    bool isVIP = IsInArray(VIPArr, input);
+
+    if (isVIP)
+        Console.WriteLine("This person is a VIP!");
+    else {
+
+        // Check if they're a regular member.
+        bool isRegularMember = IsInArray(MembersArr, input);
+
+        if (isRegularMember)
+            Console.WriteLine("This person is allowed in as a regular member.");
+        else
+            Console.WriteLine("This person isn't allowed in.");
+    }
+}
+
+static bool IsInArray(string[] arr, string toFind) {
+    for (int i = 0; i &lt; arr.Length; i++)
+        if (arr[i] == toFind)
+            return true;
+
+    return false;
+}
+
+                            </code>
+                        </pre>
+                        </div>
+                        <a class="carouselShowQuestion">Show Question</a>
+                    </div>
+                </div>
+
+                <div class="carouselItem">
+                    <div class="carouselQuestion">
+                        <h1>All Matches</h1>
+                        <p>
+                            Make a method, called <code>FindAllMatchesInArray</code> that looks like this:
+
+                            <br><br><code class="language-csharp">
+                                public List&lt;int&gt; FindAllMatchesInArray(string[] arr, string toFind) { }
+                            </code>
+                            
+                            <br><br>This code should find all of the places that <code>toFind</code> is in the array and put all of the <i>indexes</i> (what position in the array) they all are.
+                            <br><br>For example, if we have pass in an array like this as the first parameter:
+
+                            <table>
+                                <tr>
+                                    <th>0</th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                </tr>
+                                <tr>
+                                    <td>"ABC"</td>
+                                    <td>"DE"</td>
+                                    <td>"GLK"</td>
+                                    <td>"DE"</td>
+                                    <td>"DE"</td>
+                                </tr>
+                            </table>
+
+                            And we pass "DE" as the second parameter, <i>the thing we need to find in the array</i>, then it should give us <code>1, 3, 4</code> in that "List" it returns. Because it found "DE" in positions 1, 3 and 4 in the array.
+                            <br><br>To do this, make a list inside the method (like at the top), this will be what you return. Then, go through each item in the "arr" and if it matches the "toFind", add whatever "i" is to the list, to remember what position that item was at.
+                            <br><br>And return the list!
+                        </p>
+
+                        <div class="carouselExtension">
+                            <h3>Extension</h3>
+                            <p>
+                                Make the method also take in a <code>startIndex</code> that says that what point in the array we need to start searching at.
+                            </p>
+                        </div>
+
+                        <a class="carouselShowAnswer">Show Answer</a>
+                        <div class="carouselImage">
+                            <img src="images/arrays.png">
+                        </div>
+                    </div>
+                    <div class="carouselAnswer">
+                        <h1>All Matches</h1>
+                        <p>
+                            <b>Keep in mind that this is including the extension.</b>
+                        </p>
+
+                        <div class="carouselAnswerCode">
+                        <pre>
+                            <code class="language-csharp">
+static List&lt;string&gt; FindAllMatchesInArray(string[] arr, string toFind, int startIndex) {
+    List&lt;string&gt; ret = new List&lt;string&gt;();
+
+    for (int i = startIndex; i &lt; arr.Length; i++)
+        if (arr[i] == toFind)
+            ret.Add(i);
+
+    return ret;
+}
+
+                            </code>
+                        </pre>
+                        </div>
+                        <a class="carouselShowQuestion">Show Question</a>
+                    </div>
+                </div>
+
+                <!-- For CLASSES - Weather Forecast? -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Console -->
+    <div class="consoleSection">
+        <textarea class="consoleText" id="consoleInput">This requires JavaScript</textarea>
+    </div>
+
+    <div class="btsPart" data-type="background" data-speed="4">
+        <div class="btsBox">
+            <h2>Behind the Scenes</h2>
+            <p>
+                Here's a timelapse of me creating this site from scratch.
+                <br />You won't be able to understand it since not only is it way beyond the level we are at right now, but it isn't even C#!
+                <br />I just think it's nice to watch this page "evolve" from absolutely nothing.
+                <br />
+            </p>
+        </div>
+
+        <div class="videoContainer">
+            <iframe class="btsVideo" src="https://www.youtube.com/embed/ZNk5YOgNllI" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+    </div>
+
+    <div class="bottomPart">
+        <h3 class="bottomTitle">ABMedia Programming Tutorial Series Tasks Page</h3>
+        <p class="bottomText">
+            Copyright (C) Alex Burrows 2020
+            <br />This took about 3 hours to make!
+        </p>
+    </div>
+
+</body>
+</html>

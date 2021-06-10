@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<title>Episode 16 Code Example</title>
+		
+		<link rel="stylesheet" href="prism.css">
+		<script src="prism.js"></script>
+		
+		<style>
+			body {
+			    background: #f5f2f0;
+			}
+			
+			html, body, pre {
+				margin: 0;
+				position: absolute;
+				top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<pre class="language-csharp"><code>
+static void Main(string[] args)
+{
+	School school = new School();
+
+	Console.WriteLine("Enter the name of the school");
+	school.Name = Console.ReadLine();
+
+	AddStudentsTo(school);
+	AddClassroomsTo(school);
+}
+
+private static void AddStudentsTo(School school)
+{
+	while (true)
+	{
+		Console.WriteLine("Do you want to add more students (yes/no)?");
+		string answer = Console.ReadLine().ToLower();
+
+		if (answer == "no") break;
+		else if (answer == "yes")
+		{
+			Console.WriteLine("Enter the student's name.");
+			string studentName = Console.ReadLine();
+
+			Console.WriteLine("Enter the student's age.");
+			int studentAge = int.Parse(Console.ReadLine());
+
+			school.Students.Add(new Person(studentName, studentAge));
+		}
+		else Console.WriteLine("Invalid option!");
+	}
+}
+
+private static void AddClassroomsTo(School school)
+{
+	while (true)
+	{
+		Console.WriteLine("Do you want to add more classrooms (yes/no)?");
+		string answer = Console.ReadLine().ToLower();
+
+		if (answer == "no") break;
+		else if (answer == "yes")
+		{
+			Console.WriteLine("Enter the classrooms's name.");
+			string classroomName = Console.ReadLine();
+
+			Console.WriteLine("Enter the classrooms's capacity.");
+			int classroomAge = int.Parse(Console.ReadLine());
+
+			school.Classrooms.Add(new Classroom(classroomName, classroomAge));
+		}
+		else Console.WriteLine("Invalid option!");
+	}
+}
+		</code></pre>
+	</body>
+</html>
