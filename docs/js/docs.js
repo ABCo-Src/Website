@@ -112,7 +112,7 @@ function Section(Title, PagePath, IconSrc, InnerSections)
         
         // Arrow
         if (section.InnerSections.length > 0)
-            $('<img class="arrow" id="arrow" src="https://abworld.ml/img/graphics/smallRightArrow.svg">').click(function () { expandOrNestSection($(this).parent().parent()); }).appendTo(itemInfo);
+            $('<img class="arrow" id="arrow" src="../../img/graphics/smallRightArrow.svg">').click(function () { expandOrNestSection($(this).parent().parent()); }).appendTo(itemInfo);
 
         // Image
         if (section.IconSrc != "")
