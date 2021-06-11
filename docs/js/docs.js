@@ -457,13 +457,13 @@ function Section(Title, PagePath, IconSrc, InnerSections)
         if (isThemeDark) {
             $("body").removeClass("lightTheme");
             $("body").addClass("darkTheme");
-            $(".arrow").attr("src", "https://abworld.ml/img/graphics/smallRightArrowLight.svg");
+            $(".arrow").attr("src", "../../img/graphics/smallRightArrowLight.svg");
             if (cookiesEnabled) setCookie("wasDark", "yes", 365);
             sendMessage("dark");
         } else {
             $("body").removeClass("darkTheme");
             $("body").addClass("lightTheme");
-            $(".arrow").attr("src", "https://abworld.ml/img/graphics/smallRightArrow.svg");
+            $(".arrow").attr("src", "../../img/graphics/smallRightArrow.svg");
             if (cookiesEnabled) setCookie("wasDark", "no", 365);
             sendMessage("light");
         }
