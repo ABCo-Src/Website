@@ -406,28 +406,33 @@ function Section(Title, PagePath, IconSrc, InnerSections)
     }
 
     let navigateToChild = function(child) {
+		
+		if (!child.includes(".")) child += ".";
 
         // If we're in a section.
         if ($("#rootMenuList *").hasClass("menuItemSelected")) {
             let anchor = generateAnchor("");
-            handleAnchor(anchor.substring(0, anchor.length - 1) + ">" + child + ".");
+            handleAnchor(anchor.substring(0, anchor.length - 1) + ">" + child);
         }
 
-        else handleAnchor(child + ".");
+        else handleAnchor(child);
     }
 
     let navigateAlongside = function(child) {
+		
+		if (!child.includes(".")) child += ".";
+		
         let anchor = generateAnchor("");
 
         // If we're in an inner section.
         if (anchor.indexOf(">") >= 0) {
             // Trim off the last ">section."
             let trimmedAnchor = anchor.substring(0, anchor.lastIndexOf(">"));
-            handleAnchor(trimmedAnchor + ">" + child + ".");    
+            handleAnchor(trimmedAnchor + ">" + child);    
         } 
         
         // If we're in a root section.
-        else handleAnchor(child + ".");
+        else handleAnchor(child);
     }
     
     let sendMessage = function(msg) {
